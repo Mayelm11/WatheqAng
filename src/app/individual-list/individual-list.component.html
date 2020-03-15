@@ -1,0 +1,46 @@
+<p>individual-list works!</p>
+<div class="card my-5">
+    <div class="card-body">
+      <table class="table table-bordered table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">NationalID</th>
+            <th scope="col">Firstname</th>
+            <th scope="col">Address</th>
+            <th scope="col">PhoneNumber</th>
+            <th scope="col">password</th>
+            <th scope="col">MName</th>
+            <th scope="col">LastName</th>
+            <th scope="col">Gender</th>
+            <th scope="col">Skills</th>
+            <th scope="col">DOB</th>
+            <th scope="col">MAJOR</th>
+            <th scope="col">Attachments</th>
+            <th scope="col">JOP</th>
+
+  
+          </tr>
+        </thead>
+        <tbody> 
+          <tr *ngFor="let Individual of Individual">
+            <td>{{ Individual.NationalID }}</td>
+            <td>{{ Individual.Firstname }}</td>
+            <td>{{ Individual.phoneNumber }}</td>
+            <td>{{ Individual.password }}</td>
+            <td>{{ Individual.MName }}</td>
+            <td>{{ Individual.LastName }}</td>
+            <td>{{ Individual.Gender }}</td>
+            <td>{{ Individual.Skills }}</td>
+            <td>{{ Individual.DOB }}</td>
+            <td>{{ Individual.MAJOR }}</td>
+            <td>{{ Individual.Attachments }}</td>
+            <td>{{ Individual.JOP }}</td>
+
+            <td><a href="mailto:{{ Individual.Email }}">{{ Individual.Email }}</a></td>
+  
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  

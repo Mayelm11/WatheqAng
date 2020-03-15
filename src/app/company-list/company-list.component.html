@@ -1,0 +1,33 @@
+<div class="card my-5">
+  <div class="card-body">
+    <table class="table table-bordered table-striped">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Company name</th>
+          <th scope="col">startDate</th>
+          <th scope="col">endDate</th>
+          <th scope="col">Address</th>
+          <th scope="col">PhoneNumber</th>
+          <th scope="col">Password</th>
+          <th scope="col">Email</th>
+
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let company of Company">
+          <td>{{ Company.CR }}</td>
+          <td>{{ Company.CompanyName }}</td>
+          <td>{{ Company.StartDate }}</td>
+          <td>{{ Company.EndDate }}</td>
+          <td>{{ Company.phoneNumber }}</td>
+          <td>{{ Company.password }}</td>
+          <td>{{ Company.address }}</td>
+          <td><a href="mailto:{{ company.Email }}">{{ company.Email }}</a></td>
+
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

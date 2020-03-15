@@ -1,0 +1,73 @@
+<p>education-form works!</p>
+<div class="card my-5">
+    <div class="card-body">
+      <form (ngSubmit)="onSubmit()" #Education="ngForm">
+        <div class="form-group">
+          <label for="name">Email</label>
+          <input type="text" [(ngModel)]="education.email" 
+            class="form-control"
+            id="e_email"
+            name="e_email"
+            placeholder="Enter your email"
+            required #email="ngModel">
+        </div>
+        <div [hidden]="!email.pristine" class="alert alert-danger">Email is required</div>
+        <div class="form-group">
+          <label for="phoneNumber">PhoneNumber</label>
+          <input type="text" [(ngModel)]="education.phoneNumber" 
+            class="form-control"
+            id="e_phoneNumber"
+            name="e_phoneNumber"
+            placeholder="Enter your phoneNumber"
+            required #phoneNumber="ngModel">
+          <div [hidden]="!phoneNumber.pristine" class="alert alert-danger">phoneNumber is required</div>
+        </div>
+        <div class="form-group">
+          <label for="address">Address</label>
+          <input type="text" [(ngModel)]="education.address" 
+            class="form-control"
+            id="e_address"
+            name="e_address"
+            placeholder="Enter your address"
+            required #address="ngModel">
+          <div [hidden]="!address.pristine" class="alert alert-danger">Address is required</div>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="text" [(ngModel)]="education.password" 
+            class="form-control"
+            id="e_password"
+            name="e_password"
+            placeholder="Enter your password"
+            required #password="ngModel">
+          <div [hidden]="!password.pristine" class="alert alert-danger">Password is required</div>
+        </div>
+        <div class="form-group">
+          <label for="Edu_ID">Edu_ID</label>
+          <input type="text" [(ngModel)]="education.Edu_ID" 
+            class="form-control"
+            id="Edu_ID"
+            name="Edu_ID"
+            placeholder="Enter your Edu_ID"
+            required #CR="ngModel">
+          <div [hidden]="!CR.pristine" class="alert alert-danger">Edu_ID is required</div>
+        </div>
+        <div class="form-group">
+          <label for="CompanyName">Edu_Name</label>
+          <input type="text" [(ngModel)]="education.Edu_Name" 
+            class="form-control"
+            id="Edu_Name"
+            name="Edu_Name"
+            placeholder="Enter your Edu_Name"
+            required #CompanyName="ngModel">
+          <div [hidden]="!Edu_Name.pristine" class="alert alert-danger">Edu_Name is required</div>
+        </div>
+
+</div>
+        </div>
+       
+        <button type="submit" [disabled]="!education.form.valid" 
+          class="btn btn-info">Submit</button>
+      </form>
+    </div>
+  </div>

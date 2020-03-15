@@ -1,0 +1,30 @@
+<div class="card my-5">
+    <div class="card-body">
+      <table class="table table-bordered table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Edu_ID</th>
+            <th scope="col">Edu_Name</th>
+            <th scope="col">Address</th>
+            <th scope="col">PhoneNumber</th>
+            <th scope="col">password</th>
+            <th scope="col">Email</th>
+  
+  
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let Education of Education">
+            <td>{{ Education.Edu_ID }}</td>
+            <td>{{ Education.Edu_Name }}</td>
+            <td>{{ Education.phoneNumber }}</td>
+            <td>{{ Education.password }}</td>
+            <td>{{ Education.address }}</td>
+            <td><a href="mailto:{{ Education.Email }}">{{ Education.Email }}</a></td>
+  
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
